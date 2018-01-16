@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Summarizer</title>
+	</head>
+	<body>
+		<form method="GET" action="/">
+			<div>
+				<textarea style="width:60%;font-size:16px;" name="text" rows="15" placeholder="Paste text to Summarize" autofocus="true">{% if text %}{{text}}{% endif %}</textarea>
+				<br>
+				<button type="submit" style="width:10%;font-size:16px;margin-top:20px;">Summarize</button>
+			</div>
+		</form>
+		{% if summary %}
+			<div style="width:60%;font-size:16px;margin-top:20px;">{{summary}}</div>
+		{% endif %}
+	</body>
+</html>
